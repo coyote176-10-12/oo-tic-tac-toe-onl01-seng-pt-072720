@@ -40,6 +40,9 @@ def position_taken?(index)
     index.between?(0,8) && !position_taken?(index)
   end
   
+def turn 
+  
+  
   
   
 
