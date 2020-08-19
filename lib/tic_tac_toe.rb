@@ -56,7 +56,13 @@ def position_taken?(index)
     display_board 
   end
   
-  
+  def current_player 
+    if turn_count.even?
+      "X"
+      else 
+      "O"
+    end
+  end
   
   
   
