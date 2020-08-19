@@ -44,20 +44,17 @@ def position_taken?(index)
     @board.count{|token| token == "X" || token == "O"}
   end
   
-  def turn
-    puts "Please enter a number (1-9):"
+ def turn
+    puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-    if valid_move?(index)
-      token = current_player
-      move(index, token)
-    else
-      turn
-    end
-    display_board
+      if valid_move?(index)
+        move(index, current_player)
+      elsif
+        input=gets.strip
+      end
+    display_board 
   end
-  
-  
   
   
   
