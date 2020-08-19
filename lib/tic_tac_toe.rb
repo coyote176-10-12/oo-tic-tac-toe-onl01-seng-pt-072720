@@ -40,9 +40,11 @@ def position_taken?(index)
     index.between?(0,8) && !position_taken?(index)
   end
   
+  def turn_count
+    @board.count{|token| token == "X" || token == "O"}
+  end
   
-  
-   def turn
+  def turn
     puts "Please enter a number (1-9):"
     input = gets.strip
     index = input_to_index(input)
