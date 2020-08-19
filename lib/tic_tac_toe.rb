@@ -72,7 +72,25 @@ def position_taken?(index)
     end
   end
   
-  
+  def full?
+    @board.all? do |token|
+      token == "X" || token == "O"
+    end
+  end
+
+  def draw?
+    !won? && full?
+  end
+
+  def over?
+    won? || draw?
+  end
+
+  def winner
+    if winning_combo = won?
+      @board[winning_combo.first]
+    end
+  end
   
   
  
